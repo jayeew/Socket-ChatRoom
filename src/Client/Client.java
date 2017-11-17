@@ -101,8 +101,8 @@ public class Client extends JFrame {
 	private MessageThread messageThread;// 负责接收消息的线程
 	private Map<String, User> onLineUsers = new HashMap<String, User>();// 所有在线用户
 	private boolean isConnected = false;
-	private int port = 30000;
-	private String ip = "127.0.0.1";
+	private int port = ;
+	private String ip = "";
 	private String name;
 	private String pic_path = null;
 	private String mp4_path = null;
@@ -112,16 +112,11 @@ public class Client extends JFrame {
 	private Gson mGson;
 	private boolean file_is_create = true;
 	private Transmission trans;
-	// 定义录音格式
 	private AudioFormat af = null;
-	// 定义目标数据行,可以从中读取音频数据,该 TargetDataLine 接口提供从目标数据行的缓冲区读取所捕获数据的方法。
 	private TargetDataLine td = null;
-	// 定义字节数组输入输出流
 	private ByteArrayInputStream bais = null;
 	private ByteArrayOutputStream baos = null;
-	// 定义音频输入流
 	private AudioInputStream ais = null;
-	// 定义停止录音的标志，来控制录音线程的运行
 	private Boolean stopflag = false;
 
 //	// 测试主函数
@@ -455,7 +450,7 @@ public class Client extends JFrame {
 	// 文件选择，输出绝对路径
 	public void Filechose() {
 		JFileChooser jfc = new JFileChooser();
-		jfc.setCurrentDirectory(new File("C:\\Users\\王嘉意\\Desktop\\《刺客信条：起源》高清壁纸"));
+		jfc.setCurrentDirectory(new File(""));
 		jfc.addChoosableFileFilter(new MyFileFilter());
 		// jfc.
 		JFrame pic_chose = new JFrame();
@@ -522,7 +517,7 @@ public class Client extends JFrame {
 		// 写入文件
 		try {
 			// 以当前的时间命名录音的名字
-			mp4_path = new String("C:\\Users\\王嘉意\\Desktop\\《刺客信条：起源》高清壁纸\\123\\321\\语音\\");
+			mp4_path = new String("");
 			File filePath = new File(mp4_path);
 			if (!filePath.exists()) {// 如果文件不存在，则创建该目录
 				filePath.mkdir();
@@ -756,7 +751,7 @@ public class Client extends JFrame {
 							long transLength = trans.transLength;
 							if (file_is_create) {
 								fos = new FileOutputStream(new File(
-										"C:\\Users\\王嘉意\\Desktop\\《刺客信条：起源》高清壁纸\\123\\321\\" + trans.fileName));
+										"" + trans.fileName));
 								file_is_create = false;
 							}
 							byte[] b = Base64Utils.decode(trans.content.getBytes());
@@ -768,7 +763,7 @@ public class Client extends JFrame {
 								fos.close();
 								if (trans.fileName.endsWith(".jpg")) {
 									ImageIcon icon = new ImageIcon(
-											"C:\\Users\\王嘉意\\Desktop\\《刺客信条：起源》高清壁纸\\123\\321\\" + trans.fileName);
+											"" + trans.fileName);
 									// icon.
 									SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");// 设置日期格式
 									String time = df.format(new java.util.Date());
@@ -791,7 +786,7 @@ public class Client extends JFrame {
 									try {
 										docs.insertString(docs.getLength(),
 												"[" + time + "]\r\n" + name + " 说了一段话 : " + "\r\n\n", attrset);// 对文本进行追加
-										playWAV.Play("C:\\Users\\王嘉意\\Desktop\\《刺客信条：起源》高清壁纸\\123\\321\\" + trans.fileName);
+										playWAV.Play("" + trans.fileName);
 									} catch (BadLocationException e) {
 										e.printStackTrace();
 									}

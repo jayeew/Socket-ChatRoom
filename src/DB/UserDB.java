@@ -12,12 +12,12 @@ import javax.swing.JOptionPane;
  */
 public class UserDB {
 	// 驱动程序名
-	String driver = "com.mysql.jdbc.Driver";
+	String driver = "";
 	// URL指向要访问的数据库名hello
-	String url = "jdbc:mysql://118.89.225.128:3306/socket_a";
+	String url = "";
 	// MySQL配置
-	String sqluser = "root";
-	String sqlpassword = "123";
+	String sqluser = "";
+	String sqlpassword = "";
 
 	String userpwd_;
 	String username_;
@@ -46,7 +46,6 @@ public class UserDB {
 			ResultSet rs = statement.executeQuery(sql);
 			String readpwd = null;
 			while (rs.next()) {
-//				System.out.println("*****");
 				// 选择passworld这列数据
 				readpwd = rs.getString("userpwd");
 				// 首先使用ISO-8859-1字符集将其解码为字节序列并将结果存储新的字节数组中。
