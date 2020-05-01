@@ -1,11 +1,11 @@
-java»ùÓÚsocketµÄÁÄÌìÐ¡³ÌÐò£¬ÊµÏÖÈºÁÄ/Ë½ÁÄ£¬ÎÄ±¾Í¼Æ¬ÓïÒô·¢ËÍ£¬ÓÃ»§×¢²áµÇÂ¼
-server²ÉÓÃÓÃ»§->Á÷£¨User->*Stream£©µÄÓ³Éä£¬À´´æ´¢²¢Çø·Ö
-clientÓÐÊÕ/·¢Á½¸öÏß³Ì
-serverÖ÷Ïß³Ì×èÈû£¬ÓÐÁ¬½Ó±ãÐÂ¿ª×ÓÏß³Ì´¦Àí
-ÎÄ±¾´«Êä»ùÓÚÊäÈëÊä³öÁ÷µÄ¼òµ¥·â×°
-ÎÄ¼þ´«ÊäÍ¬Ñù»ùÓÚ´ËÁ÷£¬¾ßÌåÊµÏÖ£º
-	client £º ÎÄ¼þ¶ÁÈ¡Á÷->×°Ìîbyte->base64¼ÓÃÜ(±àÂë)->´ò°üjson->writeµ½Á÷
-	server £º ×Ö½Ú¶ÁÈ¡Á÷->json½â°ü->base64½âÂë(×ªÂë)->×°Ìîbyte->ÎÄ¼þÐ´ÈëÁ÷
 
-ÎªÊ²Ã´²»²ÉÓÃÎÄ¼þÁ÷´«Êä£¿
-	´ð£ºÎª±ÜÃâÁ÷Õ¼ÓÃ£¬±ØÐë¹Ø±ÕÎÄ¼þÁ÷£¬Õâ±Ø½«µ¼ÖÂsocket×ÔÐÐclose£¬ÖØÁ¬ºó¶ÔÏó¸üÐÂ²¢ÐÂ¿ªÏß³Ì£¬Ôì³ÉÖîÈçËÀÏß³Ì£¬ÕÒ²»µ½Ô­Á÷µÈÖÂÃüÎÊÌâ£¬´ËÊ±Server±ØÐëÈ«Ãæ¸ÄÐ´£¬ÆúÓÃÓÃ»§->Á÷Ä£Ê½£¬¸ÄÓÃÏß³Ì³Ø·½Ê½µÈ£¬´Ë·¬ËäÈ»»áÔÚÒ»¶¨³Ì¶ÈÉÏÌá¸ßÐ§ÂÊµ«»á¼Ó´ó´úÂëÁ¿¡£
+* serveré‡‡ç”¨ç”¨æˆ·->æµï¼ˆUser->*Streamï¼‰çš„æ˜ å°„ï¼Œæ¥å­˜å‚¨å¹¶åŒºåˆ†
+* clientæœ‰æ”¶/å‘ä¸¤ä¸ªçº¿ç¨‹
+serverä¸»çº¿ç¨‹é˜»å¡žï¼Œæœ‰è¿žæŽ¥ä¾¿æ–°å¼€å­çº¿ç¨‹å¤„ç†
+æ–‡æœ¬ä¼ è¾“åŸºäºŽè¾“å…¥è¾“å‡ºæµçš„ç®€å•å°è£…
+æ–‡ä»¶ä¼ è¾“åŒæ ·åŸºäºŽæ­¤æµï¼Œå…·ä½“å®žçŽ°ï¼š
+	client ï¼š æ–‡ä»¶è¯»å–æµ->è£…å¡«byte->base64åŠ å¯†(ç¼–ç )->æ‰“åŒ…json->writeåˆ°æµ
+	server ï¼š å­—èŠ‚è¯»å–æµ->jsonè§£åŒ…->base64è§£ç (è½¬ç )->è£…å¡«byte->æ–‡ä»¶å†™å…¥æµ
+
+ä¸ºä»€ä¹ˆä¸é‡‡ç”¨æ–‡ä»¶æµä¼ è¾“ï¼Ÿ
+	ç­”ï¼šä¸ºé¿å…æµå ç”¨ï¼Œå¿…é¡»å…³é—­æ–‡ä»¶æµï¼Œè¿™å¿…å°†å¯¼è‡´socketè‡ªè¡Œcloseï¼Œé‡è¿žåŽå¯¹è±¡æ›´æ–°å¹¶æ–°å¼€çº¿ç¨‹ï¼Œé€ æˆè¯¸å¦‚æ­»çº¿ç¨‹ï¼Œæ‰¾ä¸åˆ°åŽŸæµç­‰è‡´å‘½é—®é¢˜ï¼Œæ­¤æ—¶Serverå¿…é¡»å…¨é¢æ”¹å†™ï¼Œå¼ƒç”¨ç”¨æˆ·->æµæ¨¡å¼ï¼Œæ”¹ç”¨çº¿ç¨‹æ± æ–¹å¼ç­‰ï¼Œæ­¤ç•ªè™½ç„¶ä¼šåœ¨ä¸€å®šç¨‹åº¦ä¸Šæé«˜æ•ˆçŽ‡ä½†ä¼šåŠ å¤§ä»£ç é‡ã€‚
