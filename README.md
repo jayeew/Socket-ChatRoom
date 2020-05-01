@@ -1,4 +1,7 @@
 # 基于java的Socket聊天室
+<div align="center">
+    <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/githubio/LogoMakr_0zpEzN.png" width="200px">
+</div>
 ## Server
 * 采用用户->流（User->*Stream）的映射，来存储并区分
 * 主线程阻塞，有连接便新开子线程处理文本
